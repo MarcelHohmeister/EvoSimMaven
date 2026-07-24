@@ -1,4 +1,4 @@
-package net.hohmeima.simulation.ecs.ids;
+package net.hohmeima.evosim.simulation.ecs.ids;
 
 import org.junit.jupiter.api.Test;
 

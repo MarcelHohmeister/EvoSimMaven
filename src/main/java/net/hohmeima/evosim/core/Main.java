@@ -1,4 +1,4 @@
-package net.hohmeima;
+package net.hohmeima.evosim.core;
 
 public class Main
 {
