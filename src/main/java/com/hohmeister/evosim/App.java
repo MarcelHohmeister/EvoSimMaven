@@ -1,5 +1,6 @@
 package com.hohmeister.evosim;
 
+import com.hohmeister.evosim.core.Bootstrap;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -12,5 +13,7 @@ public class App extends Application {
         final Scene scene = new Scene(new StackPane(new Label("Hello World")), 400, 300);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        new Bootstrap().run();
     }
 }
