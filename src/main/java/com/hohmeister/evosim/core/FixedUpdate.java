@@ -38,7 +38,7 @@ public class FixedUpdate extends AnimationTimer{
         accumulator += frameTime;
 
         while (accumulator >= NANOS_PER_TICK) {
-            //systemManager.tick();
+            systemManager.tick(1.0 / Settings.TARGET_TPS);
             accumulator -= NANOS_PER_TICK;
         }
 
