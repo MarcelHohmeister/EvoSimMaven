@@ -1,8 +1,6 @@
 package com.hohmeister.evosim.entities.components.urgencies;
 
-import com.hohmeister.evosim.entities.components.EntityComponent;
-
-public class HydrationComponent implements EntityComponent {
+public class HydrationComponent implements UrgencyComponent {
     // Hydration Level
     public double currentHydration;
     public final double maxHydration;
@@ -12,7 +10,7 @@ public class HydrationComponent implements EntityComponent {
     public final double awarenessThresholdPercent;
 
     // Urgency
-    public double urgency;
+    private double urgency;
 
     public HydrationComponent(final double maxHydration, final double decayPerSecond, final double awarenessThresholdPercent){
         this.maxHydration = maxHydration;
@@ -20,5 +18,15 @@ public class HydrationComponent implements EntityComponent {
 
         this.decayPerSecond = decayPerSecond;
         this.awarenessThresholdPercent = awarenessThresholdPercent;
+    }
+
+    @Override
+    public void setUrgency(final double urgency){
+        this.urgency = urgency;
+    }
+
+    @Override
+    public double getUrgency(){
+        return urgency;
     }
 }

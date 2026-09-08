@@ -33,11 +33,13 @@ public class HydrationSystem implements Tickable {
             final double hydrationPercent = component.currentHydration / component.maxHydration;
 
             if(hydrationPercent >= component.awarenessThresholdPercent){
-                component.urgency = 0;
+                component.setUrgency(0);
             }
             // Step 5: if awarenessUrgency Hits: Calculate Urgency (closer to 0 = higherUrgency)
             else{
-                component.urgency = Math.pow(1 - (hydrationPercent / component.awarenessThresholdPercent), 2);
+                component.setUrgency(
+                        Math.pow(1 - (hydrationPercent / component.awarenessThresholdPercent), 2)
+                );
             }
         }
 
