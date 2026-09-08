@@ -22,10 +22,12 @@ public class Bootstrap {
 
     // Game loop
     private final FixedUpdate fixedUpdate;
+    private final ConsoleInput consoleInput = new ConsoleInput(entityFactory);
 
     public Bootstrap() {
         systemManager.allSystems.add(new HydrationSystem(componentManager, entityDeathSystem));
         fixedUpdate = new FixedUpdate(systemManager, renderer, entityFactory);
+        consoleInput.start();
     }
 
     public void run(){
