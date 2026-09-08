@@ -1,6 +1,5 @@
-package com.hohmeister.evosim.systems;
+package com.hohmeister.evosim.lifecycle;
 
-import com.hohmeister.evosim.entities.IDManager;
 import com.hohmeister.evosim.entities.components.ComponentManager;
 import com.hohmeister.evosim.entities.components.EntityComponent;
 

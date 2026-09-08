@@ -1,8 +1,8 @@
 package com.hohmeister.evosim.core;
 
-import com.hohmeister.evosim.entities.IDManager;
+import com.hohmeister.evosim.lifecycle.IDManager;
 import com.hohmeister.evosim.entities.components.ComponentManager;
-import com.hohmeister.evosim.systems.EntityDeathSystem;
+import com.hohmeister.evosim.lifecycle.EntityDeathSystem;
 import com.hohmeister.evosim.systems.SystemManager;
 import com.hohmeister.evosim.systems.urgencies.HydrationSystem;
 import com.hohmeister.evosim.ui.Renderer;

@@ -1,4 +1,4 @@
-package com.hohmeister.evosim.entities;
+package com.hohmeister.evosim.lifecycle;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

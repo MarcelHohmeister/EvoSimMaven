@@ -2,7 +2,7 @@ package com.hohmeister.evosim.systems.urgencies;
 
 import com.hohmeister.evosim.entities.components.ComponentManager;
 import com.hohmeister.evosim.entities.components.urgencies.HydrationComponent;
-import com.hohmeister.evosim.systems.EntityDeathSystem;
+import com.hohmeister.evosim.lifecycle.EntityDeathSystem;
 import com.hohmeister.evosim.systems.Tickable;
 
 import java.util.ArrayList;
