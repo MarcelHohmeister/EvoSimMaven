@@ -15,6 +15,8 @@ public class EntityDeathSystem {
     }
 
     public void kill(final int id){
+        System.out.println("[EntityDeathSystem] " + "Entity " + id + " died");
+
         for(final HashMap<Integer, ? extends EntityComponent> componentMap : componentManager.allComponents){
             componentMap.remove(id);
         }
