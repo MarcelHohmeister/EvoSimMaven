@@ -1,7 +1,7 @@
-package com.hohmeister.evosim.entities.components;
+package com.hohmeister.evosim.components;
 
-import com.hohmeister.evosim.entities.components.physics.PositionComponent;
-import com.hohmeister.evosim.entities.components.urgencies.HydrationComponent;
+import com.hohmeister.evosim.components.physics.PositionComponent;
+import com.hohmeister.evosim.components.urgencies.HydrationComponent;
 
 import java.util.ArrayList;
 import java.util.HashMap;

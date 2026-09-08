@@ -1,6 +1,6 @@
-package com.hohmeister.evosim.entities.components.physics;
+package com.hohmeister.evosim.components.physics;
 
-import com.hohmeister.evosim.entities.components.EntityComponent;
+import com.hohmeister.evosim.components.EntityComponent;
 import com.hohmeister.evosim.math.Vector2D;
 
 public class PositionComponent implements EntityComponent {

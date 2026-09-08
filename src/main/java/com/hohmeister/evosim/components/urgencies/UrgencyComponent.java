@@ -1,6 +1,6 @@
-package com.hohmeister.evosim.entities.components.urgencies;
+package com.hohmeister.evosim.components.urgencies;
 
-import com.hohmeister.evosim.entities.components.EntityComponent;
+import com.hohmeister.evosim.components.EntityComponent;
 
 public interface UrgencyComponent extends EntityComponent {
     double getUrgency();

@@ -1,4 +1,4 @@
-package com.hohmeister.evosim.entities.components.urgencies;
+package com.hohmeister.evosim.components.urgencies;
 
 public class HydrationComponent implements UrgencyComponent {
     // Hydration Level

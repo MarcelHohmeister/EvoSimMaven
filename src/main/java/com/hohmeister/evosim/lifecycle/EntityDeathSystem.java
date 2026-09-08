@@ -1,7 +1,7 @@
 package com.hohmeister.evosim.lifecycle;
 
-import com.hohmeister.evosim.entities.components.ComponentManager;
-import com.hohmeister.evosim.entities.components.EntityComponent;
+import com.hohmeister.evosim.components.ComponentManager;
+import com.hohmeister.evosim.components.EntityComponent;
 
 import java.util.HashMap;
 

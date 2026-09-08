@@ -1,7 +1,7 @@
 package com.hohmeister.evosim.systems.urgencies;
 
-import com.hohmeister.evosim.entities.components.ComponentManager;
-import com.hohmeister.evosim.entities.components.urgencies.HydrationComponent;
+import com.hohmeister.evosim.components.ComponentManager;
+import com.hohmeister.evosim.components.urgencies.HydrationComponent;
 import com.hohmeister.evosim.lifecycle.EntityDeathSystem;
 import com.hohmeister.evosim.systems.Tickable;
 
