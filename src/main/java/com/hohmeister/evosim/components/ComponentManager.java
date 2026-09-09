@@ -1,7 +1,9 @@
 package com.hohmeister.evosim.components;
 
+import com.hohmeister.evosim.components.ai.NavigationComponent;
 import com.hohmeister.evosim.components.physics.PositionComponent;
 import com.hohmeister.evosim.components.urgencies.HydrationComponent;
+import com.hohmeister.evosim.components.urgencies.SaturationComponent;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,6 +17,10 @@ public class ComponentManager {
 
     // Urgency Components
     public final HashMap<Integer, HydrationComponent> hydrationComponents = newComponentMap();
+    public final HashMap<Integer, SaturationComponent> saturationComponents = newComponentMap();
+
+    // AI Components
+    public final HashMap<Integer, NavigationComponent> navigationComponents = newComponentMap();
 
     public <T extends EntityComponent> HashMap<Integer, T> newComponentMap() {
         final HashMap<Integer, T> newComponent = new HashMap<>();

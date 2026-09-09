@@ -6,6 +6,7 @@ import com.hohmeister.evosim.lifecycle.EntityFactory;
 import com.hohmeister.evosim.lifecycle.IDManager;
 import com.hohmeister.evosim.systems.SystemManager;
 import com.hohmeister.evosim.systems.urgencies.HydrationSystem;
+import com.hohmeister.evosim.systems.urgencies.SaturationSystem;
 import com.hohmeister.evosim.ui.Renderer;
 
 @SuppressWarnings("FieldCanBeLocal")
@@ -26,6 +27,8 @@ public class Bootstrap {
 
     public Bootstrap() {
         systemManager.allSystems.add(new HydrationSystem(componentManager, entityDeathSystem));
+        systemManager.allSystems.add(new SaturationSystem(componentManager, entityDeathSystem));
+
         fixedUpdate = new FixedUpdate(systemManager, renderer, entityFactory);
         consoleInput.start();
     }

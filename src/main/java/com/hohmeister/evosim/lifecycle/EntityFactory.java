@@ -3,7 +3,9 @@ package com.hohmeister.evosim.lifecycle;
 import com.hohmeister.evosim.components.ComponentManager;
 import com.hohmeister.evosim.components.physics.PositionComponent;
 import com.hohmeister.evosim.components.urgencies.HydrationComponent;
+import com.hohmeister.evosim.components.urgencies.SaturationComponent;
 import com.hohmeister.evosim.lifecycle.blueprint.HydrationRawData;
+import com.hohmeister.evosim.lifecycle.blueprint.SaturationRawData;
 import com.hohmeister.evosim.lifecycle.blueprint.SpawnRequest;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -38,9 +40,14 @@ public class EntityFactory {
         componentManager.positionComponents.put(id, new PositionComponent(request.position));
 
         if(request.hydrationData != null) componentManager.hydrationComponents.put(id, buildHydration(request.hydrationData));
+        if(request.saturationData != null) componentManager.saturationComponents.put(id, buildSaturation(request.saturationData));
     }
 
     private HydrationComponent buildHydration(final HydrationRawData data){
         return new HydrationComponent(data.maxHydration(), data.decayPerSecond(), data.awarenessThresholdPercent());
+    }
+
+    private SaturationComponent buildSaturation(final SaturationRawData data){
+        return new SaturationComponent(data.maxSaturation(), data.decayPerSecond(), data.awarenessThresholdPercent());
     }
 }

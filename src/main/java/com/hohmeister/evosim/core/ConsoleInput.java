@@ -2,6 +2,7 @@ package com.hohmeister.evosim.core;
 
 import com.hohmeister.evosim.lifecycle.EntityFactory;
 import com.hohmeister.evosim.lifecycle.blueprint.HydrationRawData;
+import com.hohmeister.evosim.lifecycle.blueprint.SaturationRawData;
 import com.hohmeister.evosim.lifecycle.blueprint.SpawnRequest;
 import com.hohmeister.evosim.math.Vector2D;
 
@@ -31,6 +32,7 @@ public class ConsoleInput {
             final SpawnRequest request = new SpawnRequest();
             request.position = askPosition();
             request.hydrationData = askOptional("Hydration hinzufügen? (j/n)", this::askHydration);
+            request.saturationData = askOptional("Saturation hinzufügen? (j/n)", this::askSaturation);
 
             entityFactory.enqueue(request);
             System.out.println("Entity zur Erstellung vorgemerkt.");
@@ -48,6 +50,13 @@ public class ConsoleInput {
         final double decayPerSecond = askDouble("Decay pro Sekunde:");
         final double awarenessThresholdPercent = askDouble("Awareness Threshold (0-1):");
         return new HydrationRawData(maxHydration, decayPerSecond, awarenessThresholdPercent);
+    }
+
+    private SaturationRawData askSaturation() {
+        final double maxSaturation = askDouble("Max Saturation:");
+        final double decayPerSecond = askDouble("Decay pro Sekunde:");
+        final double awarenessThresholdPercent = askDouble("Awareness Threshold (0-1):");
+        return new SaturationRawData(maxSaturation, decayPerSecond, awarenessThresholdPercent);
     }
 
     private <T> T askOptional(final String prompt, final java.util.function.Supplier<T> builder) {

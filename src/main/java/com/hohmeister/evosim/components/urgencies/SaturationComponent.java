@@ -2,21 +2,21 @@ package com.hohmeister.evosim.components.urgencies;
 
 import com.hohmeister.evosim.systems.urgencies.ai.UtilAction;
 
-public class HydrationComponent implements UrgencyComponent {
-    // Hydration Level
-    public double currentHydration;
-    public final double maxHydration;
+public class SaturationComponent implements UrgencyComponent {
+    // Saturation Level
+    public double currentSaturation;
+    public final double maxSaturation;
 
-    // Hydration Decay
+    // Saturation Decay
     public final double decayPerSecond;
     public final double awarenessThresholdPercent;
 
     // Urgency
     private double urgency;
 
-    public HydrationComponent(final double maxHydration, final double decayPerSecond, final double awarenessThresholdPercent){
-        this.maxHydration = maxHydration;
-        this.currentHydration = maxHydration;
+    public SaturationComponent(final double maxSaturation, final double decayPerSecond, final double awarenessThresholdPercent){
+        this.maxSaturation = maxSaturation;
+        this.currentSaturation = maxSaturation;
 
         this.decayPerSecond = decayPerSecond;
         this.awarenessThresholdPercent = awarenessThresholdPercent;
@@ -34,6 +34,6 @@ public class HydrationComponent implements UrgencyComponent {
 
     @Override
     public UtilAction getAssociatedAction(){
-        return UtilAction.DRINK;
+        return UtilAction.EAT;
     }
 }
